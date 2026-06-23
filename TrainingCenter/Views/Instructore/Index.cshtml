@@ -1,0 +1,40 @@
+﻿@model List<InstructoreWithListOfDepartAndCourseVM>
+
+    
+@{
+    ViewData["Title"] = "Details";
+    
+}
+
+
+
+
+<h2>Instructores</h2>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Address</th>
+        <th>Department</th>
+        <th>Course</th>
+        <th>Details</th>
+        <th>Edit</th>
+    </tr>
+
+    @foreach (var instItem in Model)
+    {
+        <tr>
+            <td>@instItem.Id</td>
+            <td>@instItem.Name</td>
+            <td>@instItem.Salary</td>
+            <td>@instItem.Address</td>
+            <td>@instItem.DeptName</td>
+            <td>@instItem.CrsName</td>
+            <td>
+                <a asp-action="Details" asp-controller="Instructore" 
+                asp-route-id="@instItem.Id">Details</a></td>
+        </tr>        
+    }
+</table>
