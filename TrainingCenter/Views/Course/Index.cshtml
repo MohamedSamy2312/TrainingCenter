@@ -1,0 +1,27 @@
+﻿@model List<Course>
+
+    @{
+        ViewData["Title"] = "Courses";
+    }
+
+
+    <h2>Courses</h2>
+
+    <table class="table table-bordered table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Course</th>
+        <th>Hours</th>
+        <th>Department</th>
+    </tr>
+
+    @foreach(var courseItem in Model)
+    {
+        <tr>
+            <td>@courseItem.Id</td>
+            <td>@courseItem.Name</td>
+            <td>@courseItem.Hours</td>
+            <td>@courseItem.Department.Name</td>
+        </tr>
+    }
+</table>

@@ -1,4 +1,4 @@
-﻿@model List<InstructoreWithListOfDepartAndCourseVM>
+﻿@model List<Instructore>
 
     
 @{
@@ -30,8 +30,8 @@
             <td>@instItem.Name</td>
             <td>@instItem.Salary</td>
             <td>@instItem.Address</td>
-            <td>@instItem.DeptName</td>
-            <td>@instItem.CrsName</td>
+            <td>@instItem.Department.Name</td>
+            <td>@instItem.Course.Name</td>
             <td>
                 <a asp-action="Details" asp-controller="Instructore" 
                 asp-route-id="@instItem.Id">Details</a></td>

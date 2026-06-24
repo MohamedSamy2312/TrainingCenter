@@ -1,4 +1,4 @@
-﻿@model InstructoreWithListOfDepartAndCourseVM
+﻿@model Instructore
 
 @{
     ViewData["Title"] = "Details";
@@ -14,5 +14,5 @@
 <h3>
     <img src="/Images/Instructores/@Model.ImageUrl" alt="@Model.Name picture" style="width: 75px" />
     </h3>
-<h3>Name: @Model.Name</h3>
-<h3>Name: @Model.Name</h3>
+<h3 >Department: @Model.Department.Name</h3a>
+<h3>Course: @Model.Course.Name</h3>
